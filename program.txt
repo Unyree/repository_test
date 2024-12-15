@@ -25,3 +25,63 @@ for (int i = 0; i < 30; i++)
 {cout << a[i]<<"  ";
 }
 }
+
+#include <iostream>
+#include <array>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    int z[5][6]
+    {
+        {1,1,1,1,1,1},
+        {2,2,2,2,2,2},
+        {-3,3,3,3,3,3},
+        {2,2,2,2,2,2},
+        {1,1,1,1,1,1}
+    };
+      int  a[6], i{ 1 }, s{ 0 }, M{ -1000 }, m;
+
+    while (i < 6)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            s += z[i][j];
+        }
+        if (s > M)
+        {
+            M = s;
+            m = i;
+        }
+        i++;
+    }
+    cout << M <<' ' << m << endl;
+    i=0
+    while (i < 6)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            a[i] = z[m][j];
+        }
+        i++;
+    }
+    for (int i = 0; i < 6; i++)
+    {
+        cout << a[i] << "  ";
+    }
+
+
+   
+    for (int i = 0; i < 5; i++) 
+    { 
+        for (int j = 0; j < 6; j++)
+        {
+            cout << z[i][j];
+        }
+        
+        cout << " \n";
+    }
+}
+
